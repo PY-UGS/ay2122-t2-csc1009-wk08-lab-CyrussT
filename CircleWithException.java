@@ -14,7 +14,7 @@ public class CircleWithException {
         if (radius > 0 && tempArea <= 1000) {
             this.radius = radius;
         }
-        else if (radius < 0) {
+        else if (radius <= 0) {
             throw new IllegalArgumentException("Invalid input. Please enter a positive number.");
         } else {
             throw new RuntimeException("Invalid input, number too large.");

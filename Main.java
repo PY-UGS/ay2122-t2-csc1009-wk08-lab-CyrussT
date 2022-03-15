@@ -10,7 +10,7 @@ public class Main {
             System.out.println("Please enter radius for the circle: ");
             radius = input.nextDouble();
             CircleWithException circle = new CircleWithException(radius);
-            System.out.println("Area of circle is " + circle.getArea());
+            System.out.printf("Area of circle is %.2f", circle.getArea());
         } catch (IllegalArgumentException e) {
             System.out.println(e);
         } catch (RuntimeException e) {
