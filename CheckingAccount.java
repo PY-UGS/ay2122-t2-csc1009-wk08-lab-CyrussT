@@ -13,7 +13,11 @@ public class CheckingAccount {
     }
 
     public void deposit(double amount) {
-        this.accBalance += amount;
+        if (amount > 0) {
+            this.accBalance += amount;
+        } else {
+            throw new IllegalArgumentException("Please enter a positive amount");
+        }
     }
 
     public void withdraw(double amount) throws InsufficientFundsException {
@@ -30,5 +34,4 @@ public class CheckingAccount {
     public int getNumber() {
         return this.accNumber;
     }
-    
 }

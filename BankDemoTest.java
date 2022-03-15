@@ -16,9 +16,6 @@ public class BankDemoTest {
             System.out.printf("The balance after withdraw is $%.2f",cyrus.getBalance());
         } catch (InsufficientFundsException e) {
         }
-
-
-
     }
 
 }

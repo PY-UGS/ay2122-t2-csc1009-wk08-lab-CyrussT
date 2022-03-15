@@ -10,14 +10,14 @@ public class CircleWithException {
     }
 
     public void setRadius(double radius) {
-
-        if (radius > 0) {
+        double tempArea = radius * radius * Math.PI;
+        if (radius > 0 && tempArea <= 1000) {
             this.radius = radius;
         }
         else if (radius < 0) {
-            throw new IllegalArgumentException();
-        } else if (radius > 1000) {
-            throw new RuntimeException();
+            throw new IllegalArgumentException("Invalid input. Please enter a positive number.");
+        } else {
+            throw new RuntimeException("Invalid input, number too large.");
         }
     }
 
@@ -28,6 +28,5 @@ public class CircleWithException {
     public double getDiameter() {
         return radius * radius;
     }
-
 
 }
